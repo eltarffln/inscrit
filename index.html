@@ -4,158 +4,163 @@
     <base target="_self">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>حزب جبهة التحرير الوطني - محافظة الطارف - الانخراط الإلكتروني</title>
+    <meta name="description" content="الموقع الرسمي للانخراط في حزب جبهة التحرير الوطني - محافظة الطارف">
 
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#006633"
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap');
 
         body {
             font-family: 'Noto Sans Arabic', sans-serif;
         }
 
-        /* الإطار الذهبي */
-        .ornate-box {
-            background: #fffdf7;
-            border: 10px double #d4af37;
-            padding: 40px 60px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.45);
-        }
-
-        /* العنوان */
-        .ornate-title {
-            font-family: 'Amiri', serif;
-            font-size: 3.2rem;
-            color: #0b5d2a;
-            text-shadow:
-                2px 2px 0 #d4af37,
-                4px 4px 10px rgba(0,0,0,0.45);
-        }
-
-        .ornate-subtitle {
-            font-family: 'Amiri', serif;
-            font-size: 2rem;
-            color: #000;
-            text-shadow:
-                1px 1px 0 #d4af37,
-                2px 2px 6px rgba(0,0,0,0.3);
-        }
-
-        .divider {
-            width: 320px;
-            height: 4px;
-            background: linear-gradient(to right, transparent, #0b5d2a, transparent);
-            margin: 16px auto;
-        }
-
-        /* الخلفية الخضراء */
         .hero-bg {
             background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOLf3oz7WXiDuTyMIV9LBLjAtZIjM6i4N10A&s');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
         }
 
         .hero-overlay {
-            background: linear-gradient(to right, rgba(0,102,51,0.9), rgba(0,102,51,0.7));
+            background: linear-gradient(
+                to right,
+                rgba(0,102,51,0.9),
+                rgba(0,102,51,0.7)
+            );
         }
     </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="min-h-screen bg-gray-50 text-gray-800">
 
-<!-- HERO -->
-<div class="hero-bg">
-    <div class="hero-overlay py-28">
-        <div class="container mx-auto px-4 flex justify-center items-center">
+<!-- ================= HEADER ================= -->
+<header class="bg-primary">
+    <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
 
-            <div class="flex items-center gap-12">
+            <!-- Left Logo -->
+            <img src="https://fln.dz/wp-content/uploads/2022/09/logo-fln.png"
+                 alt="شعار حزب جبهة التحرير الوطني"
+                 class="w-16 h-16 md:w-24 md:h-24 object-contain">
 
-                <!-- Logo Right -->
-                <img src="https://fln.dz/wp-content/uploads/2022/09/logo-fln.png"
-                     class="w-40 h-40 object-contain">
-
-                <!-- Title -->
-                <div class="ornate-box text-center">
-                    <h1 class="ornate-title">حزب جبهة التحرير الوطني</h1>
-                    <div class="divider"></div>
-                    <h2 class="ornate-subtitle">محافظة الطارف</h2>
-                </div>
-
-                <!-- Logo Left -->
-                <img src="https://fln.dz/wp-content/uploads/2022/09/logo-fln.png"
-                     class="w-40 h-40 object-contain">
-
-            </div>
+            <!-- Right Logo -->
+            <img src="https://fln.dz/wp-content/uploads/2022/09/logo-fln.png"
+                 alt="شعار حزب جبهة التحرير الوطني"
+                 class="w-16 h-16 md:w-24 md:h-24 object-contain">
 
         </div>
     </div>
-</div>
+</header>
 
-<!-- ABOUT -->
-<section class="container mx-auto px-4 py-16">
-    <div class="bg-white rounded-lg shadow-lg p-10 text-center">
-        <h2 class="text-3xl font-bold text-primary mb-6">عن الحزب</h2>
-        <p class="text-lg leading-relaxed max-w-4xl mx-auto">
-            حزب جبهة التحرير الوطني هو حزب سياسي جزائري تاريخي، تأسس خلال ثورة التحرير
-            المجيدة كامتداد سياسي لنضال الشعب الجزائري، ويستمد مبادئه من بيان أول نوفمبر
-            1954، ويعمل على حماية الوحدة الوطنية، صون السيادة، والدفاع عن الثوابت الوطنية،
-            مع السعي لتحقيق العدالة الاجتماعية والتنمية في إطار دولة ديمقراطية.
-        </p>
+<!-- ================= HERO ================= -->
+<section class="hero-bg">
+    <div class="hero-overlay">
+        <div class="container mx-auto px-4 py-12 md:py-20 text-center text-white">
+
+            <h2 class="text-2xl md:text-4xl font-bold mb-3">
+                عن الحزب
+            </h2>
+
+            <h1 class="text-xl md:text-4xl font-extrabold mb-1">
+                حزب جبهة التحرير الوطني
+            </h1>
+
+            <p class="text-base md:text-xl mb-4">
+                محافظة الطارف
+            </p>
+
+            <p class="max-w-xl md:max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
+                حزب جبهة التحرير الوطني (FLN) هو حزب سياسي جزائري تأسس كجناح سياسي
+                لجيش التحرير الوطني خلال ثورة التحرير ضد الاستعمار الفرنسي،
+                ويرتكز على مبادئ بيان أول نوفمبر 1954، ويعمل على ترسيخ الديمقراطية
+                والعدالة الاجتماعية وحماية الثوابت الوطنية.
+            </p>
+
+        </div>
     </div>
 </section>
 
-<!-- FORM (كما كانت) -->
-<main class="container mx-auto px-4 py-8">
-    <div class="bg-white rounded-lg shadow-lg p-6">
+<!-- ================= MAIN ================= -->
+<main class="container mx-auto px-4 py-6 md:py-10">
+    <div class="bg-white rounded-lg shadow-lg p-4 md:p-6">
+
+        <!-- ====== FORM (كما هي بدون تغيير) ====== -->
         <iframe
-            id="JotFormIFrame-253493278505060"
-            src="https://form.jotform.com/253493278505060"
-            style="min-width:100%;max-width:100%;height:539px;border:none;"
-            scrolling="no">
+          id="JotFormIFrame-253493278505060"
+          title="استمارة الانخراط في حزب جبهة التحرير الوطني"
+          onload="window.parent.scrollTo(0,0)"
+          allowtransparency="true"
+          allow="geolocation; microphone; camera; fullscreen; payment"
+          src="https://form.jotform.com/253493278505060"
+          frameborder="0"
+          style="width:100%;height:700px;border:none;"
+          scrolling="no">
         </iframe>
+
         <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
         <script>
-            window.jotformEmbedHandler(
-                "iframe[id='JotFormIFrame-253493278505060']",
-                "https://form.jotform.com/"
-            );
+          window.jotformEmbedHandler(
+            "iframe[id='JotFormIFrame-253493278505060']",
+            "https://form.jotform.com/"
+          );
         </script>
+
     </div>
 </main>
 
-<!-- FOOTER -->
-<footer class="hero-bg mt-12">
-    <div class="hero-overlay text-white">
-        <div class="container mx-auto px-4 py-10">
+<!-- ================= FOOTER ================= -->
+<footer class="bg-primary text-white mt-10">
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-            <div class="text-right space-y-4 max-w-md ml-auto">
+            <div>
+                <h3 class="text-lg font-bold mb-2">
+                    حزب جبهة التحرير الوطني
+                </h3>
+                <p>محافظة الطارف</p>
+            </div>
 
-                <h3 class="text-xl font-bold">جهات الاتصال</h3>
+            <div>
+                <h3 class="text-lg font-bold mb-2">
+                    جهات الاتصال
+                </h3>
+                <p>📧 eltarffln@gmail.com</p>
+                <p>📘 Facebook</p>
+            </div>
 
-                <a href="mailto:eltarffln@gmail.com"
-                   class="flex items-center gap-2 hover:text-gray-300">
-                    <i class="fas fa-envelope"></i>
-                    <span>eltarffln@gmail.com</span>
-                </a>
-
-                <a href="https://www.facebook.com/profile.php?id=61561485430400"
-                   target="_blank"
-                   class="flex items-center gap-2 hover:text-gray-300">
-                    <i class="fab fa-facebook"></i>
-                    <span>صفحتنا على فيسبوك</span>
-                </a>
-
-                <div 
-                      
- <!-- الحقوق (وسط) -->
-            <div class="border-t border-green-700 mt-8 pt-4 text-center text-sm">
-                © 2025 جميع الحقوق محفوظة
+            <div>
+                <h3 class="text-lg font-bold mb-2">
+                    روابط سريعة
+                </h3>
+                <p>عن الحزب</p>
+                <p>الانخراط الإلكتروني</p>
             </div>
 
         </div>
+
+        <div class="border-t border-white/20 mt-6 pt-4 text-center text-gray-200 text-sm">
+            © 2025 حزب جبهة التحرير الوطني - محافظة الطارف. جميع الحقوق محفوظة.
+        </div>
     </div>
-</footer>                     
+</footer>
+
+</body>
+</html>
